@@ -3,7 +3,7 @@ import './CreateTodoButton.css';
 
 function CreateTodoButton(props) {
     const onClickButton = () => {
-        alert('Ojo con eso manito');
+        props.setOpenModal(prevState => !prevState);
     }
     return(
         <button
