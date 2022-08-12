@@ -8,6 +8,13 @@ import { TodoTitle } from '../TodoTitle';
 import { TodoContext } from '../TodoContext';
 
 function AppUI() {
+    const {
+        error,
+        loading,
+        searchedTodos,
+        completeTodo,
+        deleteTodo
+        } = React.useContext(TodoContext);
     return (
     <React.Fragment>
     <TodoTitle/>
