@@ -29,45 +29,48 @@ function App() {
     addTodo,
     } = useTodos();
     return (
-      <React.Fragment>
-              <TodoHeader>
-                  <TodoTitle/>
-                  <TodoCounter
-                      totalTodos= {totalTodos}
-                      completedTodos= {completedTodos}
-                  />
-                  <TodoSearch
-                      searchValue={searchValue}
-                      setSearchValue={setSearchValue}
-                  />
-              </TodoHeader>
-              <TodoList>
-              {error && <TodosError error={error} />}
-              {loading && <TodosLoading />}
-              {(!loading && !searchedTodos.length) && <EmptyTodos />}
-                  {searchedTodos.map(todo => (
-                  <TodoItem
-                      key={todo.text}
-                      text={todo.text}
-                      completed={todo.completed}
-                      onComplete={()=> completeTodo(todo.text)}
-                      onDelete={()=> deleteTodo(todo.text)}
-                  />
-                  ))}
-              </TodoList>
-              {!!openModal && (
-              <Modal>
-                  <TodoForm
+        <React.Fragment>
+                <TodoHeader>
+                    <TodoTitle/>
+                    <TodoCounter
+                        totalTodos= {totalTodos}
+                        completedTodos= {completedTodos}
+                    />
+                    <TodoSearch
+                        searchValue={searchValue}
+                        setSearchValue={setSearchValue}
+                    />
+                </TodoHeader>
+                <TodoList
+                    error={error}
+                    loading={loading}
+                    searchedTodos={searchedTodos}
+                    onError={() => <TodosError /> }
+                    onLoading={() => <TodosLoading /> }
+                    onEmptyTodos={() => <EmptyTodos /> }
+                    render={todo => (
+                        <TodoItem
+                        key={todo.text}
+                        text={todo.text}
+                        completed={todo.completed}
+                        onComplete={()=> completeTodo(todo.text)}
+                        onDelete={()=> deleteTodo(todo.text)}
+                    />
+                    )}
+                />
+                {!!openModal && (
+                <Modal>
+                    <TodoForm
                     addTodo={addTodo}
                     setOpenModal={setOpenModal}
-                  />
-              </Modal>
-          )}
-      <CreateTodoButton
-          setOpenModal = {setOpenModal}
-      />
-      </React.Fragment>
-      )
+                />
+                </Modal>
+                )}
+            <CreateTodoButton
+                setOpenModal = {setOpenModal}
+            />
+        </React.Fragment>
+        )
 }
 
 export default App;
