@@ -5,13 +5,14 @@ import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
 import { TodoForm } from "../TodoForm";
-import {TodosError} from '../TodosError';
-import {TodosLoading} from '../TodosLoading';
-import {EmptyTodos} from '../EmptyTodos';
-import {TodoHeader} from '../TodoHeader';
-import {TodoCounter} from '../TodoCounter';
-import {TodoSearch} from '../TodoSearch';
-import {TodoTitle} from '../TodoTitle';
+import { TodosError } from '../TodosError';
+import { TodosLoading } from '../TodosLoading';
+import { EmptyTodos } from '../EmptyTodos';
+import { TodoHeader } from '../TodoHeader';
+import { TodoCounter } from '../TodoCounter';
+import { TodoSearch } from '../TodoSearch';
+import { TodoTitle } from '../TodoTitle';
+import { ChangeAlertWithStorageListener } from '../ChangeAlert';
 
 function App() {
   const {
@@ -91,6 +92,7 @@ function App() {
             <CreateTodoButton
                 setOpenModal = {setOpenModal}
             />
+            <ChangeAlertWithStorageListener />
         </React.Fragment>
         )
 }
