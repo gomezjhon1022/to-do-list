@@ -28,6 +28,7 @@ function App() {
     searchValue,
     setSearchValue,
     addTodo,
+    syncronizeTodos,
     } = useTodos();
     return (
         <React.Fragment>
@@ -92,7 +93,10 @@ function App() {
             <CreateTodoButton
                 setOpenModal = {setOpenModal}
             />
-            <ChangeAlertWithStorageListener />
+            <ChangeAlertWithStorageListener
+                syncronized = {syncronizeTodos}
+
+            />
         </React.Fragment>
         )
 }
