@@ -1,6 +1,6 @@
 import React from 'react';
 
-function useStorageListener(syncronized) {
+function useStorageListener(syncronize) {
 
         const [storageChange, setStorageChange] = React.useState(false);
         React.useEffect(() => {
@@ -16,7 +16,7 @@ function useStorageListener(syncronized) {
             };
         }, []);
         const toggleShow =()=>{
-            syncronized();
+            syncronize();
             setStorageChange(false);
         }
         return {

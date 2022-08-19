@@ -2,8 +2,8 @@ import React from 'react';
 import { useStorageListener } from './useStorageListener';
 import './ChangeAlert.css';
 
-function ChangeAlert({syncronized}) {
-    const {show, toggleShow} = useStorageListener(syncronized);
+function ChangeAlert({syncronize}) {
+    const {show, toggleShow} = useStorageListener(syncronize);
     if (show) {
         return (
             <div className="ChangeAlert-bg">
