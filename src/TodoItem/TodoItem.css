@@ -1,3 +1,16 @@
+.TodoList-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TodoList-container ul {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .TodoItem {
     background-color: #fafafa;
     position: relative;
@@ -6,6 +19,8 @@
     align-items: center;
     margin-top: 24px;
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    width: 100%;
+    border-radius: 15px;
 }
 
 .TodoItem-p {
@@ -14,6 +29,8 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
+    overflow: auto;
+    padding: 0 30px;
 }
 
 .TodoItem-p--complete {
@@ -49,3 +66,9 @@
 .Icon-delete:hover {
     color: red;
 }
+
+/* @media (max-width: 950px) {
+    .TodoSearch {
+        width: 320px;
+    }
+} */

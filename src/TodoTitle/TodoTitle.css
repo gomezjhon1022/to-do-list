@@ -2,3 +2,14 @@
     font-size: 34px;
     text-align: center;
 }
+
+.list-icon {
+    background-image: url('list-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin: 0 10px;
+}

@@ -7,13 +7,18 @@ function TodoSearch({searchValue, setSearchValue, loading}) {
         setSearchValue(event.target.value);
     };
     return (
+        <div className='search-container'>
         <input
         className="TodoSearch"
-        placeholder='Cereza'
+        placeholder='Busqueda'
         value={searchValue}
         onChange={onSearchValueChange}
         disabled={loading}
         />
+        <span className='search-icon'>
+        </span>
+
+        </div>
     );
 }
 
