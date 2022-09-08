@@ -13,6 +13,7 @@ import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
 import { TodoTitle } from '../TodoTitle';
 import { ChangeAlert } from '../ChangeAlert';
+import './index.css';
 
 function App() {
   const {
@@ -60,7 +61,7 @@ const {
                     totalTodos={totalTodos}
                     searchText={searchValue}
                     onEmptySearchResults={(searchText) => (
-                        <p>No hay resultado para {searchText} </p>
+                        <p className="search-description">No hay resultado para {searchText} </p>
                         )}
 
                 // usando render prop
