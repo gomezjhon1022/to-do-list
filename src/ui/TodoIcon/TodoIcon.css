@@ -18,6 +18,12 @@
     right: 0;
 }
 
+.Icon-container--edit {
+    position: absolute;
+    top: -24px;
+    right: 48px;
+}
+
 .Icon-svg {
     width: 24px;
     height: 24px;
@@ -30,4 +36,8 @@
 
 .Icon-container:hover .Icon-svg--delete {
     fill: red;
+}
+
+.Icon-container:hover .Icon-svg--edit {
+    fill: #61dafa;
 }

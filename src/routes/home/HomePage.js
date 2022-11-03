@@ -16,11 +16,11 @@ import { ChangeAlert } from '../../ui/ChangeAlert';
 
 
 function HomePage() {
-  const {
+    const {
     states,
     stateupdaters,
-  } = useTodos();
-  const {
+    } = useTodos();
+    const {
     error,
     loading,
     totalTodos,
@@ -30,7 +30,7 @@ function HomePage() {
     openModal,
     } = states;
 
-const {
+    const {
     setSearchValue,
     completeTodo,
     deleteTodo,
@@ -63,21 +63,6 @@ const {
                     onEmptySearchResults={(searchText) => (
                         <p className="search-description">No hay resultado para {searchText} </p>
                         )}
-
-                // usando render prop
-                //     render={todo => (
-                //         <TodoItem
-                //         key={todo.text}
-                //         text={todo.text}
-                //         completed={todo.completed}
-                //         onComplete={()=> completeTodo(todo.text)}
-                //         onDelete={()=> deleteTodo(todo.text)}
-                //     />
-                //    )}
-                //     />
-
-
-                // usando render funtion
                 >
                     {todo => (
                         <TodoItem
@@ -86,6 +71,7 @@ const {
                         completed={todo.completed}
                         onComplete={()=> completeTodo(todo.text)}
                         onDelete={()=> deleteTodo(todo.text)}
+                        onEdit={()=> console.log('editando')}
                         />
                     )}
                 </TodoList>
