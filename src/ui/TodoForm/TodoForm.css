@@ -1,8 +1,9 @@
 form {
     width: 90%;
-    max-width: 300px;
+    max-width: 600px;
     background-color: #fff;
-    padding: 33px 40px;
+    margin: 60px auto;
+    padding: 40px;
     display: flex;
     align-content: center;
     flex-direction: column;
