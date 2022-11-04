@@ -1,8 +1,8 @@
 # To do list
-Es un proyecto donde se utiliza React.js, es una lista de tareas pendientes.
+Es un proyecto donde se utiliza React.js, React Router, es una lista de tareas pendientes.
 ### Características
 
-- Permite agregar o eliminar una tarea.
+- Permite agregar editar o eliminar una tarea.
 - Se puede marcar una tarea como realizada.
 - En caso de tener dos ventanas abiertas, si hay cambios en una de ellas, aparece una alerta en la otra donde le indica al usuario que hubo cambios y se puede actualizar para cargar la lista actualizada.
 - Se puede hacer una busqueda y aparecen las tareas con coincidencias.
